@@ -1,42 +1,30 @@
 <script setup>
-import TodoList from './components/TodoList.vue';
-const Frodo = [
-  {title: 'Weed front garden.',             completed: true},
-  {title: 'Chill and smoke some Old Toby.', completed: true},
-  {title: 'Keep ring secret and safe.',     completed: false},
-  {title: 'Meet Gandalf at Bree.',          completed: false},
-  {title: 'Destroy ring and defeat dark lord.', completed: false},
-]
+import CardBody from "./components/CardBody.vue";
 
-const Sam = [
-  {title: 'Trim the verge.',                completed: true},
-  {title: 'Eavesdrop on Master Frodo & Gandalf.', completed: true},
-  {title: 'Boil, mash, and stick potatoes in stew.', completed: false},
-  {title: 'Carry Frodo.',                   completed: false},
-  {title: 'Be all round legend.',           completed: false},
-]
+const card_1 = {
+  title:"The Magnificent Bogra",
+  para:"Located in Rajshahi Division, Bogra is one of the oldest and most fascinating towns in Bangladesh",
+  img:"https://i.ibb.co/Kr4b0zJ/152013403-10158311889099633-8423107287930246533-o.jpg",
+  distanceInfo:"196 km",
+  reviews:"16 reviews",
+  placesToVisit:"*Places to visit: Mahasthangarh, Vasu Bihar & Momo Inn",
+  btnLink:"Book Ticket"
+}
+
+
 </script>
 
 <template>
   <section class="mx-auto ">
-    <h1 class="my-10 text-center">Components</h1>
-    <div class="flex items-center justify-center h-[600px] font-medium">
-      <div class="flex flex-grow items-center justify-center h-full text-gray-600 bg-gray-100">
-        <!-- Component Start -->
-        <TodoList title="Frodo's Jobs" :tasks="Frodo" background="bg-white"/>
-        <!-- Component End  -->
-      </div>
-      <div class="flex flex-grow items-center justify-center bg-gray-900 h-full">
-        <!-- Component Start -->
-        <TodoList title="Sam's Jobs" :tasks="Sam" background="bg-gray-800"/>
-        <!-- Component End  -->
+    <h1 class="my-5 text-center">Components</h1>
+    <div class="flex flex-col space-y-5  text-left">
 
-      </div>
+      <CardBody :cards="card_1"/>
+
+      <CardBody :cards="card_1"/>
     </div>
 
   </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
